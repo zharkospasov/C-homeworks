@@ -4,9 +4,16 @@ namespace _01.NumbersEndingIn7
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            for (int i = 7; i <= 997; i++)
+            {
+                if (i%10==7)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            
         }
     }
 }
