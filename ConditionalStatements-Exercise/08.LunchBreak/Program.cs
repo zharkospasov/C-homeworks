@@ -14,7 +14,7 @@ namespace _08.LunchBreak
             double totalFreeTime = brakeLenght - lunchtime - freeTime;
             if (totalFreeTime-movieDuration>=0)
             {
-                Console.WriteLine($"You have enough time to watch {movieName} and left with {totalFreeTime - movieDuration} minutes free time.");
+                Console.WriteLine($"You have enough time to watch {movieName} and left with {Math.Ceiling(totalFreeTime - movieDuration)} minutes free time.");
             }
             else
             {
