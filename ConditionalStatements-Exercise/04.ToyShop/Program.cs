@@ -13,15 +13,15 @@ namespace _04.ToyShop
             int minions = int.Parse(Console.ReadLine());
             int trucks = int.Parse(Console.ReadLine());
 
-            double totalSales = puzzels * 2.60 + dolls * 3 + teddyBears * 4.10 + minions * 8.20 + trucks * 2;
-            if (puzzels+dolls+teddyBears+minions+trucks>50)
+            double totalSales = puzzels * 2.60 + dolls * 3.00 + teddyBears * 4.10 + minions * 8.20 + trucks * 2.00;
+            if (puzzels+dolls+teddyBears+minions+trucks>=50)
             {
                 totalSales = totalSales - totalSales * 0.25;
             }
             totalSales -= totalSales * 0.1;
-            if (totalSales-tripPrice>0)
+             if (totalSales-tripPrice>=0)
             {
-                Console.WriteLine($"Yes! {totalSales-tripPrice} lv left.");
+                Console.WriteLine($"Yes! {(totalSales-tripPrice):f2} lv left.");
             }
             else
             {
