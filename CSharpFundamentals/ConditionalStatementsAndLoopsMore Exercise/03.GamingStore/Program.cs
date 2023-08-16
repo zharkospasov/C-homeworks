@@ -88,6 +88,20 @@ namespace _03.GamingStore
                         Console.WriteLine("Too Expensive");
                     }
                 }
+                else if (input == "RoverWatch Origins Edition")
+                {
+                    gamePrice = 39.99;
+                    if (balance >= gamePrice)
+                    {
+                        Console.WriteLine($"Bought {input}");
+                        balance -= gamePrice;
+                        totalSpent -= gamePrice;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Too Expensive");
+                    }
+                }
                 else
                 {
                     Console.WriteLine("Not Found");
@@ -95,11 +109,16 @@ namespace _03.GamingStore
                 input = Console.ReadLine();
 
             }
+            if (balance<=0)
+            {
+                Console.WriteLine($"Out of money!");
+            }
             if (balance>0)
             {
-                Console.WriteLine($"Total spent: ${totalSpent:f2}. Remaining: ${balance:f2}");
+                Console.WriteLine($"Total spent: ${Math.Abs(totalSpent):f2}. Remaining: ${balance:f2}");
 
             }
+            
         }
     }
 }
